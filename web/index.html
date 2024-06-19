@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="myapp">
+
+  <script type="module">
+
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBPcOmEBbzUItwvg17a73ydgnhfU64uV4Q",
+      authDomain: "streaming-9e486.firebaseapp.com",
+      projectId: "streaming-9e486",
+      storageBucket: "streaming-9e486.appspot.com",
+      messagingSenderId: "563961134160",
+      appId: "1:563961134160:web:1c96985a0f3dad7e772555"
+    };
+
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <link rel="manifest" href="manifest.json">
+  <title>Streaming</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #0F3767;
+      color: #7a8183;
+    }
+
+    #loading-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .spinner {
+      display: flex;
+      justify-content: space-between;
+      width: 70px;
+      margin-bottom: 20px;
+    }
+
+    .dot {
+      width: 15px;
+      height: 15px;
+      background-color: #eaeaea8a;
+      border-radius: 50%;
+      animation: bounce 1.4s infinite ease-in-out both;
+    }
+
+    .dot:nth-child(1) {
+      animation-delay: -0.32s;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: -0.16s;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      80%,
+      100% {
+        transform: scale(0);
+      }
+
+      40% {
+        transform: scale(1);
+      }
+    }
+
+    p {
+      margin-top: 10px;
+      color: #eaeaea8a;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading-indicator">
+    <div class="spinner">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <p>Cargando...</p>
+  </div>
+
+  <script src="main.dart.js" defer></script>
+
+  <script src="flutter_bootstrap.js" async></script>
+
+  </script>
+</body>
+
+</html>
